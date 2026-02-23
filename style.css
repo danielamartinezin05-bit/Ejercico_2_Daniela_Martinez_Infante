@@ -1,0 +1,380 @@
+/* Reset general para eliminar márgenes blancos de la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; /* Fondo negro para que combine con la barra */
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de Navegación */
+.navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #333; /* Línea divisoria sutil */
+}
+
+/* Estilos de botones */
+.btn-pill, .btn-circle {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-pill {
+    padding: 8px 25px;
+    border-radius: 25px;
+}
+
+.btn-circle {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+/* EFECTO HOVER */
+.btn-pill:hover, .btn-circle:hover {
+    background-color: white;
+    color: black;
+}
+
+/* CONFIGURACIÓN DE LA FOTO HASTA LOS BORDES */
+.contenedor-foto {
+    width: 100%;
+    line-height: 0; /* Elimina espacio pequeño debajo de la imagen */
+}
+
+.foto-full {
+    width: 100%;    /* Ocupa todo el ancho disponible */
+    height: auto;   /* Mantiene la proporción para que no se deforme */
+    display: block; /* Elimina espacios extra en la base */
+}
+
+
+
+
+
+
+
+.intro-texto {
+    display: flex;            /* Activa el modo caja flexible */
+    justify-content: center;   /* Centra el contenido horizontalmente */
+    text-align: center;       /* Centra las líneas de texto */
+    padding: 40px 20px;       /* Da espacio arriba/abajo y a los lados */
+}
+
+.intro-texto p {
+    max-width: 650px;         /* Limita el ancho para que sea fácil de leer como en tu foto */
+    color: white;             /* Color de texto para fondo negro */
+    font-family: 'Helvetica', Arial, sans-serif; /* Tipografía limpia */
+    font-size: 16px;          /* Tamaño similar al de tu diseño */
+    line-height: 1.6;         /* Espaciado entre líneas para legibilidad */
+    margin: 0 auto;           /* Asegura que el párrafo esté centrado en su contenedor */
+    font-style: italic;       /* Opcional: si quieres darle ese toque de "cita" */
+}
+
+
+
+
+
+
+
+
+/* Contenedor principal para centrar la cuadrícula */
+.contenedor-botones {
+    display: grid;
+    grid-template-columns: repeat(2, 300px); /* Crea 2 columnas de 300px cada una */
+    gap: 20px;                               /* Espacio entre los botones */
+    justify-content: center;                 /* Centra toda la cuadrícula en la pantalla */
+    padding: 40px 0;
+}
+
+/* Estilo individual de cada botón */
+.boton-bloque {
+    background-color: white;
+    color: black;
+    text-decoration: none;                  /* Quita el subrayado del enlace */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;                 /* Pone el texto uno sobre otro */
+    align-items: center;                    /* Centra el texto horizontalmente */
+    text-align: center;
+    transition: all 0.3s ease;              /* Suaviza el efecto al pasar el ratón */
+}
+
+/* Efecto al pasar el ratón (Hover) */
+.boton-bloque:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);                 /* Crece un poquito para dar feedback */
+}
+
+/* Estilo para el texto pequeño superior */
+.etiqueta {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+/* Estilo para el nombre principal del bloque */
+.nombre {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* Ajuste para móviles (se pone en una sola columna) */
+@media (max-width: 650px) {
+    .contenedor-botones {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ESTILOS ESPECÍFICOS PARA PÁGINAS DE BLOQUES (bloqueX.html) --- */
+
+/* Fondo negro y tipografía Futura para todo el cuerpo */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Futura", "Futura PT", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que padding y border no aumenten el ancho total */
+}
+
+/* Enlace para volver al inicio */
+.header-interno {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+
+/* Contenedor principal del contenido del bloque */
+.contenido-bloque {
+    max-width: 800px; /* Ancho máximo para el contenido, como en tu Illustrator */
+    margin: 0 auto;   /* Centra el contenido */
+    padding: 20px;
+    padding-bottom: 80px; /* Espacio antes del footer */
+}
+
+/* Título principal del bloque */
+.titulo-bloque {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Estilos para la imagen del bloque */
+.imagen-bloque {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center; /* Centra la imagen y la caption */
+}
+
+.imagen-bloque img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen si es más pequeña que el max-width */
+}
+
+.imagen-bloque figcaption {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* Estilo para los párrafos de texto */
+.seccion-texto p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    letter-spacing: 0.2px;
+}
+
+/* Estilo para la cita de Falcinelli */
+.cita-falcinelli {
+    font-size: 20px; /* Un poco más grande para destacar */
+    font-style: italic;
+    text-align: center;
+    margin: 60px auto;
+    padding: 0 40px;
+    max-width: 700px; /* Para que la cita no se vea demasiado ancha */
+    color: #e0e0e0; /* Un gris más claro para las citas */
+    border-left: 2px solid #fff; /* Línea de cita a la izquierda */
+    padding-left: 30px;
+}
+
+/* Resaltado de texto en la cita para la interactividad */
+.cita-falcinelli strong {
+    /* Puedes añadir aquí un color diferente o un subrayado si quieres */
+    color: #fff; /* Asegura que las palabras destacadas tengan buen contraste */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+    .titulo-bloque {
+        font-size: 28px;
+    }
+    .seccion-texto p {
+        font-size: 15px;
+    }
+    .cita-falcinelli {
+        font-size: 18px;
+        padding: 0 10px;
+        margin: 40px auto;
+    }
+}
+
+
+
+
+
+
+
+/* Limpieza de márgenes del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    /* Prioriza Futura si la tienes instalada, si no usa Montserrat */
+    font-family: 'Futura', 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+/* Contenedor principal */
+.editorial-container {
+    width: 100%;
+}
+
+/* Sección de Títulos */
+.header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.titulo-principal {
+    font-size: 8.5rem;   /* Tamaño masivo */
+    font-weight: 900;    /* Muy gruesa */
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Imagen a Sangre (Full Width) */
+.imagen-full {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.imagen-full img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Cuerpo de Texto (Más estrecho para legibilidad) */
+.texto-contenido {
+    max-width: 650px;    /* El texto es más angosto que la imagen */
+    margin: 0 auto;
+    padding: 0 30px 100px 30px;
+}
+
+.texto-contenido p {
+    font-size: 1rem;
+    font-weight: 300;    /* Tipografía fina para el cuerpo */
+    margin-bottom: 25px;
+    color: #efefef;
+    text-align: left;
+}
+
+/* Estilo para la Cita Final (Tipo Monoespaciado) */
+.cita-mono {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #fff;
+    padding-top: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.intro-cita {
+    margin-bottom: 10px !important;
+    font-weight: 500 !important;
+}
+
+
+
+
+.site-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    border-top: 1px solid #333; /* Una línea sutil para separar */
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
